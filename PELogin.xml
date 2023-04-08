@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="parallel_Execution" parallel="classes" thread-count="3">
+	<test thread-count="5" name="Test">
+		<parameter name="browserName" value="chrome"></parameter>
+		<packages>
+			<package name="login_Module">
+				<include name="login.*"></include>
+			</package>
+		</packages>
+		<!--    <classes>
+      <class name="login_Module.Login_as_Assistant"/>
+      <class name="login_Module.Login_as_Head"/>
+      <class name="login_Module.Login_as_Officer"/>
+    </classes>-->
+	</test> <!-- Test -->
+</suite> <!-- Group_Execution -->

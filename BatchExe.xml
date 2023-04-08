@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="HRM_Regression">
+ 	<listeners>
+		<listener class-name="com.GenericUtility.AnnotationTransformer"/>
+		
+	</listeners> 
+  <test thread-count="5" name="Test" preserve-order="false">
+	<!--preserve-order will run the execution in alphabetical order -->
+    <classes>
+      <class name="admin_Module.Validate_Admin"/>
+      <class name="admin_Module.Validate_the_Search_field_in_Admin_Module_for_HR_Head"/>
+      <class name="admin_Module.Create_Admin"/>
+      <class name="branch_Module.Create_Branches"/>
+      <class name="admin_Module.Validate_edited_HR_Head_Credentials"/>
+      <class name="admin_Module.Create_Employee_as_Head_and_delete_Employee_as_Assistant"/>
+      <class name="admin_Module.Create_Employee_as_Head"/>
+      <class name="corporate_Module.Create_Corporate"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- HRM_Regression -->
