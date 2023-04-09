@@ -251,4 +251,18 @@ public class WebDriverUtility {
 		WebDriverWait wait = new WebDriverWait(driver, 5);
 		return wait.until(ExpectedConditions.alertIsPresent());
 	}
+	
+	/**
+	 * It will return the shadow root element 
+	 * To find the root use querySelector(cssSelector).shadowRoot.querySelector(cssSelector)
+	 * @param driver
+	 * @param JSEleRoot (Confirmed in JS console)
+	 * @return WebElement
+	 * @author Vinaykumar Mannur
+	 */
+	public WebElement getShadowRootElement(WebDriver driver, String JSEleRoot) {
+		JavascriptExecutor jse = (JavascriptExecutor) driver;
+		WebElement element = (WebElement)jse.executeScript("return " + JSEleRoot);
+		return element;
+	}
 }
